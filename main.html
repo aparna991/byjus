@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byjus Revived - Smart Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(white, white) padding-box, 
+                        repeating-linear-gradient(45deg, #7F178E, #7F178E 10px, transparent 10px, transparent 20px);
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .signup-section {
+            text-align: center;
+            padding: 50px;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .signup-section h1 {
+            color: #333;
+        }
+        .signup-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .signup-buttons button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .google { background: #fff; border: 1px solid #ddd; }
+        .facebook { background: #1877f2; color: white; }
+        .apple { background: black; color: white; }
+        .email { text-decoration: underline; color: #7F178E; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="signup-section">
+        <h1>Get 7 Free Days of Byjus Revived</h1>
+        <div class="signup-buttons">
+            <div id="free-trial" class="free-trial-section">
+                <h2>Get 7 free days of Byjus Revived</h2>
+                <button class="scroll-up-btn">Scroll Up</button>
+            </div>
+            <button class="google">Continue with Google</button>
+            <button class="facebook">Continue with Facebook</button>
+            <button class="apple">Continue with Apple</button>
+        </div>
+        <p class="email">Continue with email</p>
+    </div>
+    
+    <nav class="navbar">
+        <div class="logo">Byjus Revived</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Engaging, Future-Ready & Smart Learning</h1>
+            <p>Empower young minds with fun, interactive, and high-quality education.</p>
+            <a href="#courses" class="btn">Explore Courses</a>
+        </div>
+    </header>
+    
+    <section class="features">
+        <h2>Why Choose Byjus Revived?</h2>
+        <div class="feature-container">
+            <div class="feature-card">
+                <h3>Interactive Learning</h3>
+                <p>Videos, quizzes, and challenges to make learning fun.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Future-Ready Skills</h3>
+                <p>Courses designed to prepare students for tomorrow.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Smart AI Guidance</h3>
+                <p>Personalized study paths for every learner.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="subjects-scroll">
+        <h2>Explore Subjects</h2>
+        <div class="scroll-container">
+            <div class="subject-card">
+                <h3>Social Studies</h3>
+            </div>
+            <div class="subject-card">
+                <h3>Math</h3>
+            </div>
+            <div class="subject-card">
+                <h3>English</h3>
+            </div>
+            <div class="subject-card">
+                <h3>Biology</h3>
+            </div>
+            <div class="subject-card">
+                <h3>Physics</h3>
+            </div>
+            <div class="subject-card">
+                <h3>Competitive ExamPrep</h3>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>Customer Testimonials</h2>
+        <p class="testimonials-subtext">Our experience has been transformative and enriching.</p>
+        
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"This platform has changed my child's learning journey!"</p>
+                <div class="user">
+                    <img src="images/user1.png" alt="User 1">
+                    <div>
+                        <h4>Emily Johnson</h4>
+                        <p>Parent, Happy Family</p>
+                    </div>
+                </div>
+               
+            </div>
+    
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"The support and resources are outstanding!"</p>
+                <div class="user">
+                    <img src="images/user2.png" alt="User 2">
+                    <div>
+                        <h4>Michael Smith</h4>
+                        <p>Student, Grade 10</p>
+                    </div>
+                </div>
+               
+            </div>
+    
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"I never thought learning could be this fun!"</p>
+                <div class="user">
+                    <img src="images/user3.png" alt="User 3">
+                    <div>
+                        <h4>Sarah Lee</h4>
+                        <p>Student, Grade 8</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2025 Byjus Revived. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector(".scroll-up-btn").addEventListener("click", function() {
+            document.querySelector(".navbar").scrollIntoView({ behavior: "smooth" });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const featureCards = document.querySelectorAll(".feature-card");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    featureCards.forEach((card) => {
+        observer.observe(card);
+    });
+});
+
+    </script>
+</body>
+</html>
